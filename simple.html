@@ -11,7 +11,11 @@
 </head>
 <body>
 <script>
-
+    let urlParams = new URLSearchParams(window.location.search);
+    let userId = urlParams.get('userId');
+    let accessToken = urlParams.get('accessToken');
+    console.log(`This is my user Id : ${userId}`);
+    console.log(`This is my access token : ${accessToken}`);
     function codeAddress() {
         let ui = new Basiq({
             userId : userId,
@@ -19,7 +23,6 @@
             demo: true
         });
         ui.render();
-        document.getElementById("container").innerHTML = userId;
     }
     window.onload = codeAddress;
 
