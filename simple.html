@@ -11,20 +11,22 @@
 </head>
 <body>
 <script>
-    let ui = new Basiq({
-        userId : "c229e80c-b49d-43cd-a821-b18301285899",
-        accessToken : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXJ0bmVyaWQiOiI0MWM1ZGIyMy1jMWRjLTRiN2YtODllMy0yODk3ZjY0MzhiNDciLCJhcHBsaWNhdGlvbmlkIjoiMjdmMzE4NTItYWY2MS00MTQwLWJhYTUtNzMwMDU2ODQxYWJjIiwic2NvcGUiOiJTRVJWRVJfQUNDRVNTIiwic2FuZGJveF9hY2NvdW50Ijp0cnVlLCJlbnJpY2giOiJkaXNhYmxlZCIsImFmZm9yZGFiaWxpdHkiOiJzYW5kYm94IiwiaW5jb21lIjoic2FuZGJveCIsImV4cGVuc2VzIjoic2FuZGJveCIsImV4cCI6MTU4NDY4NjE4MywiaWF0IjoxNTg0NjgyNTgzLCJ2ZXJzaW9uIjoiMi4wIn0.KwI75Q-Tz_a2VyWGwAGd-ooOSPj-_pY63dAxZPCTCbM",
-        demo: true
-    });
+
     function codeAddress() {
+        let ui = new Basiq({
+            userId : userId,
+            accessToken : accessToken,
+            demo: true
+        });
         ui.render();
+        document.getElementById("container").innerHTML = userId;
     }
     window.onload = codeAddress;
 
 
 
 </script>
-    <div>
+    <div id = "container">
 
     </div>
 </body>
