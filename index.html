@@ -25,7 +25,7 @@
         blinkHost: blinkHost,
         userId: userId,
         accessToken: accessToken,
-        demo: true,
+        demo: !!demo && demo === "true",
         connectionId: connectionId,
         statements: statements !== "false"
     });
